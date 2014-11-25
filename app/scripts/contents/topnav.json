@@ -1,0 +1,40 @@
+[
+	{
+		"name": "Beranda",
+		"link": "#/"
+	},
+	{
+		"name": "Layanan",
+		"link": "#/",
+		"menus": [
+			{
+				"name": "QPOS",
+				"link": "#/services/qpos"
+			},
+			{
+				"name": "QStore",
+				"link": "#/services/qstore"
+			},
+			{
+				"name": "QDelivery",
+				"link": "#/services/qdelivery"
+			},
+			{
+				"name": "QDistribution",
+				"link": "#/services/qdistribution"
+			}
+		]
+	},
+	{
+		"name": "Langkah Memulai",
+		"link": "#/tour"
+	},
+	{
+		"name": "Masuk/Daftar",
+		"link": "#/login"
+	},
+	{
+		"name": "Hubungi Kami",
+		"link": "#/contact-us"
+	}
+]
