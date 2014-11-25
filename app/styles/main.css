@@ -30,8 +30,8 @@ h1{
 }
 
 h2{
-  font-size: 20px
-;}
+  font-size: 20px;
+}
 
 h3{
   font-size: 16px;
@@ -115,7 +115,7 @@ a:focus {
   margin-left: 20px;
 }
 
-body > section {
+section {
   padding: 70px 0;
 }
 

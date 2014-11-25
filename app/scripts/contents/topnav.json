@@ -9,19 +9,23 @@
 		"menus": [
 			{
 				"name": "QPOS",
-				"link": "#/services/qpos"
+				"link": "javascript:",
+				"target": "#section-qpos"
 			},
 			{
 				"name": "QStore",
-				"link": "#/services/qstore"
+				"link": "javascript:",
+				"target": "#section-qstore"
 			},
 			{
 				"name": "QDelivery",
-				"link": "#/services/qdelivery"
+				"link": "javascript:",
+				"target": "#section-qdelivery"
 			},
 			{
 				"name": "QDistribution",
-				"link": "#/services/qdistribution"
+				"link": "javascript:",
+				"target": "#section-qdistribution"
 			}
 		]
 	},

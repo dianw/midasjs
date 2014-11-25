@@ -21,7 +21,8 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <script type="text/ng-template" id="menuTree">
-      <a class="change" href="{{ menu.link }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ menu.name }} <span ng-if="menu.menus" class="caret"></span></a>
+      <a class="change" href="{{ menu.link }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" ng-if="'javascript:' != menu.link">{{ menu.name }} <span ng-if="menu.menus" class="caret"></span></a>
+      <a class="change" href="javascript:" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" scroll-to="{{ menu.target }}" ng-if="'javascript:' == menu.link">{{ menu.name }} <span ng-if="menu.menus" class="caret"></span></a>
       <ul ng-if="menu.menus" ng-class="{'dropdown-menu': true}" role="menu">
         <li ng-repeat="menu in menu.menus" ng-include="'menuTree'" ng-class="change">
         </li>
@@ -37,7 +38,7 @@
                 </button>
                 <a id="scroll-logo" class="navbar-brand" href="index.html">
                     <img id="top-logo" src="images/logos/logo.png" alt="logo">
-                    <img id="buttom-logo" src="images/logos/logo_white.png" alt="logo">
+                    <img id="buttom-logo" src="images/logos/logo_white.png" alt="logo" style="display: inline;">
                 </a>
             </div>
 
@@ -109,6 +110,7 @@
         <script src="scripts/services/topnavservice.js"></script>
         <script src="scripts/services/footerservice.js"></script>
         <script src="scripts/controllers/footer.js"></script>
+        <script src="scripts/directives/scrollto.js"></script>
         <!-- endbuild -->
 </body>
 </html>

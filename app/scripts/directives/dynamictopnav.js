@@ -8,25 +8,24 @@
  */
 /* global $:false */
 angular.module('hoqiiApp')
-  .directive('dynamicTopNav', function () {
+  .directive('dynamicTopNav', function ($window) {
     return {
       link: function postLink(scope, element) {
           element.find('.dropdown-toggle').dropdown();
           element.find('#buttom-logo').hide();
           $(window).scroll(function(){
             var distanceY = $(window).scrollTop(),
-                shrinkOn = 650,
-                header = element.find('#scroll-nav');
+                shrinkOn = $window.innerHeight - 50;
             if (distanceY > shrinkOn) {
-                header.addClass( 'navbar-scroll' );
+                element.addClass( 'navbar-scroll' );
                 element.find('#buttom-logo').show();
                 element.find('#buttom-logo').css('height','36px');
                 element.find('#top-logo').hide();
             } else {
                 element.find('#buttom-logo').hide();
                 element.find('#top-logo').show();
-                if (header.hasClass( 'navbar-scroll' )) {
-                    header.removeClass( 'navbar-scroll' );
+                if (element.hasClass( 'navbar-scroll' )) {
+                    element.removeClass( 'navbar-scroll' );
                 }
             }
         });
